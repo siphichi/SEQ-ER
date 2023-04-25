@@ -1,7 +1,5 @@
 
 import doctest
-import matplotlib as mp
-import numpy as np
 
 """
 polar_d = {"N": "Aspargine", "Q": "Glutamine", "S": "Serine", "T": "Threonine", "Y": "Tyrosine"}
