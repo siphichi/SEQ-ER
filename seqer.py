@@ -1,5 +1,7 @@
 
 import doctest
+import matplotlib as mp
+import numpy as np
 
 """
 polar_d = {"N": "Aspargine", "Q": "Glutamine", "S": "Serine", "T": "Threonine", "Y": "Tyrosine"}
@@ -48,7 +50,6 @@ class Protein:
         * abbrev_seq: list<str>
         
         >>> glutathione = Protein("GCE")
-        "Your protein was created."
         """
         self.sequence = sequence.upper()
         self.length = len(sequence)
@@ -65,7 +66,7 @@ class Protein:
             if residue in overall_d:
                 self.word_seq.append(overall_d[residue])
             else:
-                self.word_seq.append("("+residue + ")")
+                self.word_seq.append("("+residue+ ")")
         
         
         return self.word_seq
@@ -124,16 +125,14 @@ class Protein:
         >>> thing.has_signalseq()
         True
         """
-#         return 8 <= self.domains()[0][1] <= 16
-        return 4 <= self.domains()[0][1] <= 8
+        return 8 <= self.domains()[0][1] <= 16
     
     def has_tm_seq(self):
         """ Takes a sequence of amino acids and returns if it has a transmembrane sequence.
         >>> seq_analysis("AAK")
         """
         for domain in self.domains()[1:]: # [('Thing', 20), ('Thing 2', 20)]
-#             if domain[0] == 'Non Polar' and 20 <= domain[1] <= 25:
-            if domain[0] == 'Non Polar' and 10 <= domain[1] <= 12:
+            if domain[0] == 'Non Polar' and 20 <= domain[1] <= 25:
                 return True
                 
         return False
@@ -160,4 +159,3 @@ class Protein:
     
     
     
-
