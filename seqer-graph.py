@@ -3,9 +3,6 @@ import numpy as np
 
 from seqer import *
 
-#WWWWWWWWDDDDDDDDDRRRRRRRRRKK
-#plt.style.use('_mpl-gallery')
-
 def plot_charges(sequence):
     # make the data
     x = np.arange(start=1, stop=len(str(sequence))+1, step=1)
