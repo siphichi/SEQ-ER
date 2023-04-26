@@ -1,5 +1,5 @@
-import seqgraph as graph
-import seqtext as text
+import seqer-graph as graph
+import seqer-text as text
 import seqer as seq
 
 # Sample sequence: WWWWWWWWDDDDDDDDDRRRRRRRRRKK
